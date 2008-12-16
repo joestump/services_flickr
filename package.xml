@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.4.2" 
+         version="2.0" 
+         xmlns="http://pear.php.net/dtd/package-2.0" 
+         xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+                             http://pear.php.net/dtd/tasks-1.0.xsd
+                             http://pear.php.net/dtd/package-2.0
+                             http://pear.php.net/dtd/package-2.0.xsd">
+    <name>Services_Flickr</name>
+    <channel>pear.php.net</channel>
+    <summary>Implementation of the Flickr.com API</summary>
+    <description>This package lets you communicate with the popular photo sharing site, Flickr.com, through it's REST API.</description>
+    <lead>
+        <name>Joe Stump</name>
+        <user>jstump</user>
+        <email>joe@joestump.net</email>
+        <active>yes</active>
+    </lead>
+    <date>2006-11-22</date>
+    <time>17:22:42</time>
+    <version>
+        <release>0.0.5</release>
+        <api>0.0.5</api>
+    </version>
+    <stability>
+        <release>alpha</release>
+        <api>alpha</api>
+    </stability>
+    <license uri="http://www.opensource.org/licenses/lgpl-license.php">GNU Lesser General Public License v2.1</license>
+    <notes><![CDATA[
+        * Added tests
+        * Updated package.xml
+    ]]></notes>
+    <contents>
+        <dir name="/">
+            <dir name="Services">
+                <file name="Flickr.php" 
+                      role="php" />
+                <dir name="Flickr">
+                    <file name="Blogs.php"
+                          role="php" />
+                    <file name="Common.php"
+                          role="php" />
+                    <file name="Contacts.php"
+                          role="php" />
+                    <file name="Favorites.php"
+                          role="php" />
+                    <file name="Groups.php"
+                          role="php" />
+                    <dir name="Groups">
+                        <file name="Pools.php"
+                              role="php" />
+                    </dir>                        
+                    <file name="Interestingness.php"
+                          role="php" />
+                    <file name="People.php"
+                          role="php" />
+                    <file name="Photos.php"
+                          role="php" />
+                    <dir name="Photos">
+                        <file name="Comments.php"
+                              role="php" />
+                        <file name="Geo.php"
+                              role="php" />
+                        <file name="Licenses.php"
+                              role="php" />
+                        <file name="Notes.php"
+                              role="php" />
+                        <file name="Transform.php"
+                              role="php" />
+                        <file name="Upload.php"
+                              role="php" />
+                    </dir>
+                    <file name="Photosets.php"
+                          role="php" />
+                    <dir name="Photosets">
+                        <file name="Comments.php"
+                              role="php" />
+                    </dir>
+                    <file name="Reflection.php"
+                          role="php" />
+                    <file name="Tags.php"
+                          role="php" />
+                    <file name="Test.php"
+                          role="php" />
+                    <file name="URLs.php"
+                          role="php" />
+                </dir> 
+            </dir> 
+            <dir name="examples">
+                <file name="call.php"                       
+                      role="doc" />
+                <file name="getMethods.php"                       
+                      role="doc" />
+                <file name="getRecent.php"                       
+                      role="doc" />
+            </dir>
+            <dir name="tests">
+                <file name="001-people-findByEmail.phpt"
+                      role="test" />
+                <file name="002-people-findByUsername.phpt"
+                      role="test" />
+                <file name="003-people-getInfo.phpt"
+                      role="test" />
+                <file name="004-people-getPublicGroups.phpt"
+                      role="test" />
+                <file name="tests-config.php"
+                      role="test" />
+            </dir>
+        </dir>
+    </contents>
+    <dependencies>
+        <required>
+            <php>
+                <min>5.0.0</min>
+            </php>
+            <pearinstaller>
+                <min>1.4.0b1</min>
+            </pearinstaller>
+        </required>
+    </dependencies>
+    <phprelease />
+    <changelog>
+        <release>
+            <date>2006-10-04</date>
+            <time>17:22:42</time>
+            <version>
+                <release>0.0.3</release>
+                <api>0.0.3</api>
+            </version>
+            <stability>
+                <release>alpha</release>
+                <api>alpha</api>
+            </stability>
+            <license uri="http://www.opensource.org/licenses/php.php">PHP License v3.0</license>
+            <notes><![CDATA[
+                * Added Services_Flickr_Photos::save() to save images locally
+            ]]></notes>
+        </release>
+        <release>
+            <date>2006-09-27</date>
+            <time>17:22:42</time>
+            <version>
+                <release>0.0.2</release>
+                <api>0.0.2</api>
+            </version>
+            <stability>
+                <release>alpha</release>
+                <api>alpha</api>
+            </stability>
+            <license uri="http://www.opensource.org/licenses/php.php">PHP License v3.0</license>
+            <notes><![CDATA[
+                * Added auto-detection of array()'s for comma deliminated fields
+                * Added a missing require to Services_Flickr_Common
+                * Added Flickr_Common::$sharedSecret for Flickr authentication
+                * Added Flickr_Common::signature() to computer Flickr's api_sig field
+                * Fixed notice for SERVICES_FLICKR_ERROR_INVALID_API_KEY
+            ]]></notes>
+        </release>
+        <release>
+            <date>2006-09-25</date>
+            <time>17:22:42</time>
+            <version>
+                <release>0.0.1</release>
+                <api>0.0.1</api>
+            </version>
+            <stability>
+                <release>alpha</release>
+                <api>alpha</api>
+            </stability>
+            <license uri="http://www.opensource.org/licenses/php.php">PHP License v3.0</license>
+            <notes><![CDATA[
+                * Initial release
+            ]]></notes>
+        </release>
+
+    </changelog>
+</package>
